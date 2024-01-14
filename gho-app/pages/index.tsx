@@ -1,7 +1,5 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { WALLETCONNECT_PROJECT_ID } from '@/constants';
+// pages/index.tsx
+
 import { WagmiConfig, createConfig } from "wagmi";
 import { ConnectKitProvider, ConnectKitButton, getDefaultConfig } from "connectkit";
 
@@ -9,10 +7,10 @@ const config = createConfig(
   getDefaultConfig({
     // Required API Keys
     alchemyId: process.env.ALCHEMY_ID, // or infuraId
-    walletConnectProjectId: WALLETCONNECT_PROJECT_ID,
+    walletConnectProjectId: process.env.WALLETCONNECT_PROJECT_ID,
 
     // Required
-    appName: "gclc",
+    appName: "Your App Name",
 
     // Optional
     appDescription: "Your App Description",
@@ -21,25 +19,15 @@ const config = createConfig(
   }),
 );
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const Home: React.FC = () => {
   return (
     <WagmiConfig config={config}>
       <ConnectKitProvider>
-        {/* Your layout structure */}
-        <header>
-          {/* Header content */}
-        </header>
-        <main>{children}</main>
-        <footer>
-          {/* Footer content */}
-        </footer>
+        {/* Your App */}
         <ConnectKitButton />
       </ConnectKitProvider>
     </WagmiConfig>
+  );
+};
 
-  )
-}
+export default Home;
