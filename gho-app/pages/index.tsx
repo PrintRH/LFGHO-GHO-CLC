@@ -1,33 +1,26 @@
 // pages/index.tsx
 import React from 'react';
-import { useConnectKit } from 'connectkit';
+import { WagmiConfig, createConfig } from 'wagmi';
+import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
+import {
+  ThirdwebProvider,
+} from "@thirdweb-dev/react";
+import MyComponent from './MyComponent';
+
+const config = createConfig({
+  chains: [mainnet, polygon, optimism, arbitrum],
+  walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
+});
 
 const Home: React.FC = () => {
-  const { connect, disconnect, account } = useConnectKit();
-
-  const handleConnectWallet = async () => {
-    try {
-      await connect();
-    } catch (error) {
-      console.error('Error connecting wallet:', error);
-    }
-  };
-
-  const handleDisconnectWallet = () => {
-    disconnect();
-  };
-
   return (
     <div>
       <h1>Connect Wallet Demo</h1>
-      {account ? (
-        <>
-          <p>Connected Account: {account}</p>
-          <button onClick={handleDisconnectWallet}>Disconnect Wallet</button>
-        </>
-      ) : (
-        <button onClick={handleConnectWallet}>Connect Wallet</button>
-      )}
+      <ThirdwebProvider clientId="cd53e0c74ffcf66da0d8098ee483c4fc">
+        <WagmiConfig config={config}>
+          <MyComponent />
+        </WagmiConfig>
+      </ThirdwebProvider>
     </div>
   );
 };
