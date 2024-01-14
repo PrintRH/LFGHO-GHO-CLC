@@ -1,32 +1,34 @@
 // pages/index.tsx
-
-import { WagmiConfig, createConfig } from "wagmi";
-import { ConnectKitProvider, ConnectKitButton, getDefaultConfig } from "connectkit";
-
-const config = createConfig(
-  getDefaultConfig({
-    // Required API Keys
-    alchemyId: process.env.ALCHEMY_ID, // or infuraId
-    walletConnectProjectId: process.env.WALLETCONNECT_PROJECT_ID,
-
-    // Required
-    appName: "Your App Name",
-
-    // Optional
-    appDescription: "Your App Description",
-    appUrl: "https://family.co", // your app's url
-    appIcon: "https://family.co/logo.png", // your app's icon, no bigger than 1024x1024px (max. 1MB)
-  }),
-);
+import React from 'react';
+import { useConnectKit } from 'connectkit';
 
 const Home: React.FC = () => {
+  const { connect, disconnect, account } = useConnectKit();
+
+  const handleConnectWallet = async () => {
+    try {
+      await connect();
+    } catch (error) {
+      console.error('Error connecting wallet:', error);
+    }
+  };
+
+  const handleDisconnectWallet = () => {
+    disconnect();
+  };
+
   return (
-    <WagmiConfig config={config}>
-      <ConnectKitProvider>
-        {/* Your App */}
-        <ConnectKitButton />
-      </ConnectKitProvider>
-    </WagmiConfig>
+    <div>
+      <h1>Connect Wallet Demo</h1>
+      {account ? (
+        <>
+          <p>Connected Account: {account}</p>
+          <button onClick={handleDisconnectWallet}>Disconnect Wallet</button>
+        </>
+      ) : (
+        <button onClick={handleConnectWallet}>Connect Wallet</button>
+      )}
+    </div>
   );
 };
 
