@@ -16,11 +16,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <h1>Connect Wallet Demo</h1>
-      <ThirdwebProvider clientId="cd53e0c74ffcf66da0d8098ee483c4fc">
-        <WagmiConfig config={config}>
           <MyComponent />
-        </WagmiConfig>
-      </ThirdwebProvider>
     </div>
   );
 };
