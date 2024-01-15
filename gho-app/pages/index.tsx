@@ -1,14 +1,15 @@
 // pages/index.tsx
 import React from 'react';
 import { ConnectKitButton } from 'connectkit';
-import '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import { ConnectWallet } from '@thirdweb-dev/react';
 
 
 const Home: React.FC = () => {
   return (
-    <div className="container">
-      <h1>Connect Wallet Demo</h1>
+    <div className={styles.container}>
       <ConnectKitButton/>
+      <ConnectWallet/>
     </div>
   );
 };

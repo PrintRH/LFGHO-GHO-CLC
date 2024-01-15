@@ -45,17 +45,9 @@ const config = createConfig(
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider
+    <ThirdwebProvider activeChain={activeChain}
       clientId="cd53e0c74ffcf66da0d8098ee483c4fc" locale={en()}
       supportedWallets={[
-        smartWallet(
-          coinbaseWallet(),
-          smartWalletOptions,
-        ),
-        smartWallet(
-          walletConnect(),
-          smartWalletOptions,
-        ),
         smartWallet(
           localWallet(),
           smartWalletOptions,
