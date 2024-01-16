@@ -200,3 +200,91 @@
 .centeredCard button:hover {
   background-color: teal;
 }
+.Card {
+  height: 100%;
+  width: 100%;
+}
+.email{
+  position: absolute;
+  margin-top: 70px;
+}
+.login{
+  position: absolute;
+  margin-top: 170px;
+}
+.emailtag {
+  position: absolute;
+  margin-top: 73px;
+  border: none; /* Turn off borders */
+  background: none; /* Turn off background */
+  outline: none;
+  height: 31px;
+  color: white;
+}
+.emailtag:focus {
+  border: white; /* Turn off borders */
+  background: none; /* Turn off background */
+  outline: none;
+}
+.box{
+  height: 31px;
+  position: absolute;
+  width: 260px;
+  border-radius: 10px;
+  border: 0.2px solid #FFF;
+  background: linear-gradient(271deg, #2A2A2A 0.19%, #1E1E1E 100.37%); 
+  color: white;
+  margin-top: 160px;/* Add your desired background color */
+}
+.gho1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.gho2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.main {
+  background: #161616;
+}
+.navbox {
+    height: 102px;
+    width: 95rem;
+    position: absolute;
+    left: 0.5%;
+    top: 3%;
+}
+.rectangle {
+  -webkit-backdrop-filter: blur(40px) brightness(100%);
+  backdrop-filter: blur(40px) brightness(100%);
+  background: linear-gradient(180deg, rgb(45, 45, 45) 0%, rgb(25, 25, 25) 100%);
+  border: 0.3px solid;
+  border-color: #ffffff;
+  border-radius: 34px;
+  height: 102px;
+}
+.logo1 {
+  position: absolute;
+  top: 20%;
+  left: 2%;
+}
+.nav1 {
+  position: absolute;
+  top: 40%;
+  left: 32%;
+}
+.nav2 {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+}
+.nav3 {
+  position: absolute;
+  top: 40%;
+  left: 55%;
+}
+.navtitle {
+  justify-content: space-between;
+}

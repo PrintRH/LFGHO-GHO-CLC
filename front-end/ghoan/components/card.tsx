@@ -4,9 +4,7 @@ import { NextPage } from "next";
 import Image from 'next/image';
 import { ACCOUNT_FACTORY_ADDRESS, NFT_CONTRACT_ADDRESS } from "../constants/addresses";
 import { useState } from "react";
-import Card from "../components/card";
-import Nav from "../components/nav";
-
+import Button from "./button";
 const embeddedWalletConfig = embeddedWallet();
 
 const smartWalletConfig = smartWallet(embeddedWalletConfig, {
@@ -14,18 +12,22 @@ const smartWalletConfig = smartWallet(embeddedWalletConfig, {
   gasless: true,
 });
 
-const Home: NextPage = () => {
+const Card: NextPage = () => {
 
   return (
     <main className={styles.main}>
-      <Nav/>
       <div className={styles.container}>
-        <Card></Card>
-        <Image src="/images/gho1.png" width={467} height={467} className={styles.gho1}></Image>
-        <Image src="/images/gho2.png" width={467} height={467} className={styles.gho2}></Image>
+        <div className={styles.centeredContainer}>
+        <Image src="/images/Card.png" alt="IMAGE" width={412} height={251}/>
+        <Image src="/images/Email.png" width={261} height={31} className={styles.email} alt={""}/>
+        <input className={styles.emailtag}></input>
+        <Button onClick={function (): void {
+            throw new Error("Function not implemented.");
+          } } label={""}/>
+        </div>   
       </div>
     </main>
   );
 };
 
-export default Home;
+export default Card;
