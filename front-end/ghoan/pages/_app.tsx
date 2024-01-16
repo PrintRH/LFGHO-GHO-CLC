@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { ThirdwebProvider, embeddedWallet, metamaskWallet, smartWallet } from "@thirdweb-dev/react";
+import { ThirdwebProvider, embeddedWallet, metamaskWallet, smartWallet, localWallet } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import { ACCOUNT_FACTORY_ADDRESS } from "../constants/addresses";
 
@@ -16,11 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThirdwebProvider
-      clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
+      clientId="9516e58d95cc8d72ae67816057f1049c"
       activeChain={activeChain}
       supportedWallets={[
         smartWallet(embeddedWallet(), smartWalletConfig),
-        smartWallet(metamaskWallet(), smartWalletConfig),
+        smartWallet(localWallet(), smartWalletConfig),
       ]}
     >
       <Component {...pageProps} />
