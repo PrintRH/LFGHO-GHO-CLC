@@ -18,8 +18,8 @@ const Nav: React.FC = () => {
               Loan<span className={styles.chevron}>&#9660;</span>
             </Link>
             <div className={styles.dropdownContent}>
-              <a href="#">Dropdown Item 1</a>
-              <a href="#">Dropdown Item 2</a>
+            <Link href="/Loanpage">1</Link>
+              <Link href="/Loanpage">2</Link>
               {/* Add more dropdown items as needed */}
             </div>  
           </div>
