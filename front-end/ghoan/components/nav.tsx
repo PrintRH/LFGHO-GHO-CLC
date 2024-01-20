@@ -1,30 +1,34 @@
-import { ConnectWallet, Web3Button, embeddedWallet, localWallet, metamaskWallet, smartWallet, useAddress, useConnect, useContract, useOwnedNFTs } from "@thirdweb-dev/react";
-import styles from "../styles/Home.module.css";
-import { NextPage } from "next";
+import React from 'react';
+import styles from '../styles/Home.module.css';
 import Image from 'next/image';
-import { ACCOUNT_FACTORY_ADDRESS, NFT_CONTRACT_ADDRESS } from "../constants/addresses";
-import { useState } from "react";
-import Button from "./button";
-const embeddedWalletConfig = embeddedWallet();
+import Link from 'next/link';
 
-const smartWalletConfig = smartWallet(embeddedWalletConfig, {
-  factoryAddress: ACCOUNT_FACTORY_ADDRESS,
-  gasless: true,
-});
-
-const Nav: NextPage = () => {
-
+const Nav: React.FC = () => {
   return (
     <main className={styles.main}>
-    <div className={styles.navbox}>
+      <div className={styles.navbox}>
         <div className={styles.rectangle} />
-        <Image src="/images/Logo.png" alt="IMAGE" width={183} height={60} className={styles.logo1}/>
-    <div className={styles.navtitle}>
-        <div className={styles.nav1}>Home</div>
-        <div className={styles.nav2}>Get a Loan</div>
-        <div className={styles.nav3}>About Us</div>
-    </div>
-    </div>
+        <Image src="/images/Logo.png" alt="IMAGE" width={183} height={60} className={styles.logo1} />
+        <div className={styles.navtitle}>
+          <Link className={styles.nav1} href="/">
+            Home
+          </Link>
+          <div className={styles.dropdownContainer}>
+            <Link className={styles.nav2} href="/Loanpage">
+              Loan<span className={styles.chevron}>&#9660;</span>
+            </Link>
+            <div className={styles.dropdownContent}>
+              <a href="#">Dropdown Item 1</a>
+              <a href="#">Dropdown Item 2</a>
+              {/* Add more dropdown items as needed */}
+            </div>  
+          </div>
+          <Link className={styles.nav3} href="/Cards">
+            Card
+          </Link>
+          <button className={styles.box1}>Connect Wallet</button>
+        </div>
+      </div>
     </main>
   );
 };
