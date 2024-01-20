@@ -12,8 +12,10 @@ const Card: NextPage = () => {
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.centeredContainer}>
-        <Image src="/images/Card.png" alt="IMAGE" width={412} height={251}/>
-        < ConnectEmbed/>
+          <div className={styles.cardEmbed}>
+           <Image src="/images/Card.png" alt="IMAGE" width={412} height={251}/>
+           <ConnectEmbed />
+          </div>
         </div>   
       </div>
     </main>
