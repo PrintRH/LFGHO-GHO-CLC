@@ -16,7 +16,7 @@ const Card = () => {
         <div className={styles.centeredContainer}>
           <div className={styles.cardEmbed}>
             <div className={styles.cardImage}>
-              <Image src="/images/cardBig.png" alt="IMAGE" width={412} height={251}  />
+              <Image src="/images/cardBig.png" alt="IMAGE" width={412*1.7} height={251*1.7}  style={{ marginLeft: '-170px' ,marginTop:'-40px'}} />
               <div className={styles.connectEmbed}>
                 {showConnectEmbed ? (
                   <ConnectEmbed
@@ -26,7 +26,7 @@ const Card = () => {
                   />
                 ) : (
                   <div className={styles.connectedAddress}>
-                   <h1> Connected Wallet :</h1> {address}
+                   <h1>KABIX.ETH</h1> ACCOUNT HOLDER
                   </div>
                 )}
               </div>
