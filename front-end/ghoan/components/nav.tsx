@@ -29,7 +29,6 @@ const Nav: React.FC = () => {
             CARD
           </Link>
           {/*<button className={styles.box1}>Connect Wallet</button>*/}
-          <ConnectEmbed />
         </div>
       </div>
     </main>

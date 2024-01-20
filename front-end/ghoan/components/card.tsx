@@ -12,7 +12,8 @@ const Card: NextPage = () => {
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.centeredContainer}>
-        < ConnectEmbed/>
+          <div className={styles.cardEmbed}>
+          
 
         <Image src="/images/Card.png" alt="IMAGE" width={412} height={251}/>
         {/*<Image src="/images/Email.png" width={261} height={31} className={styles.email} alt={""}/>
@@ -20,6 +21,8 @@ const Card: NextPage = () => {
         <Button onClick={function (): void {
             throw new Error("Function not implemented.");
           } } label={""}/>*/}
+           <ConnectEmbed />
+          </div>
         </div>   
       </div>
     </main>

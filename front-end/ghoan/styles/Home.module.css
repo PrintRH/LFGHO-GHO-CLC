@@ -7,6 +7,10 @@
   src: url('../public/BebasNeue-Regular.ttf') format('truetype');
 }
 
+.cardEmbed :nth-child(2) {
+  top: 2;
+  position: absolute;
+}
 .container {
   width: 100%;
   max-width: 100rem;
