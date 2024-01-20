@@ -7,6 +7,16 @@
   src: url('../public/BebasNeue-Regular.ttf') format('truetype');
 }
 
+.connectedAddress {
+  margin-top: 10px; /* Add spacing between the image and the connected address */
+  font-size: 13.5px;
+  color: #fff; /* Change the text color */
+  padding: 10px;
+  padding-left: 15px; /* Add padding */
+  border-radius: 5px; /* Add rounded corners */
+  align-items: center;
+}
+
 .cardEmbed {
   position: relative;
   width: 400px;
@@ -17,6 +27,7 @@
   position: relative;
   width: 200%;
   height: 200%;
+  align-items: center;
 }
 
 .connectEmbed {
