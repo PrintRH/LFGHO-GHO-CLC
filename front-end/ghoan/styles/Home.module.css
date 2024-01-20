@@ -352,7 +352,7 @@ transform: scale(1.15);
   margin-left: 2rem;
 }
 .enlarge-on-hover:hover {
-  transform: scale(1.15); /* Adjust the scaling factor as needed */
+  transform: scale(1.10); /* Adjust the scaling factor as needed */
 }
 .tableContainer {
   width: 80%; /* Adjust the width as needed */

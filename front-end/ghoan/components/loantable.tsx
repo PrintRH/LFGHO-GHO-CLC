@@ -32,7 +32,7 @@ const LoanTable: React.FC<LoanTableProps> = ({ rowNames }) => {
               key={index}
               style={selectedRow === index ? selectedRowStyle : undefined}
               onClick={() => handleRowClick(index)}
-              className={styles['enlarge-on-hover']} // Use the CSS module class
+              className={styles['enlarge-on-hover']} // Use the CSS module class 
             >
               <td style={tableCellStyle}><button className={styles.table1}>{rowName}</button></td>
               <td style={tableCellStyle}>$800K</td>
@@ -56,8 +56,7 @@ const tableHeaderStyle: React.CSSProperties = {
 const tableCellStyle: React.CSSProperties = {
   padding: '45px',
   textAlign: 'left',
-  cursor: 'pointer',
-  marginBottom: '100px', // Add vertical space between rows (adjust the value as needed)
+  cursor: 'pointer', // Add vertical space between rows (adjust the value as needed)
 };
 
 
