@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ConnectEmbed } from "@thirdweb-dev/react";
 
 
 const Nav: React.FC = () => {
@@ -29,7 +28,6 @@ const Nav: React.FC = () => {
             CARD
           </Link>
           {/*<button className={styles.box1}>Connect Wallet</button>*/}
-          <ConnectEmbed />
         </div>
       </div>
     </main>
