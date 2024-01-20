@@ -7,15 +7,42 @@
   src: url('../public/BebasNeue-Regular.ttf') format('truetype');
 }
 
-.cardEmbed :nth-child(2) {
-  top: 2;
-  position: absolute;
+.cardEmbed {
+  position: relative;
+  width: 412px;
+  height: 251px;
 }
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.connectEmbed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  background: #161616;
+}
+
 .container {
   width: 100%;
   max-width: 100rem;
   padding: 0 1rem;
   margin: 0 auto;
+}
+
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .gradientText0 {
@@ -157,13 +184,6 @@
   filter: invert(1);
 }
 
-.centeredContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
 .centeredCard {
   background-color: #232323;
   border-radius: 10px;
@@ -277,9 +297,7 @@
   bottom: 0;
   right: 0;
 }
-.main {
-  background: #161616;
-}
+
 .navbox {
     width: 99%;
     position: absolute;
