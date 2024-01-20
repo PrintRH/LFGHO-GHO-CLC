@@ -12,9 +12,9 @@ const Card = () => {
           <div className={styles.cardEmbed}>
             <div className={styles.cardImage}>
               <Image src="/images/Card.png" alt="IMAGE" width={412} height={251} />
-            </div>
-            <div className={styles.connectEmbed}>
-              <ConnectEmbed />
+              <div className={styles.connectEmbed}>
+                <ConnectEmbed />
+              </div>
             </div>
           </div>
         </div>
