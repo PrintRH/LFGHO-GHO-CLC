@@ -14,7 +14,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ onClick, label }) => {
     return (
       <button className={styles.box} onClick={onClick}>
-        Login
+        LOGIN
       </button>
     );
   };

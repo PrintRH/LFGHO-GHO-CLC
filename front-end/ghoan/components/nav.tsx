@@ -11,11 +11,11 @@ const Nav: React.FC = () => {
         <Image src="/images/Logo.png" alt="IMAGE" width={183} height={60} className={styles.logo1} />
         <div className={styles.navtitle}>
           <Link className={styles.nav1} href="/">
-            Home
+            HOME
           </Link>
           <div className={styles.dropdownContainer}>
             <Link className={styles.nav2} href="/Loanpage">
-              Loan<span className={styles.chevron}>&#9660;</span>
+              LOAN<span className={styles.chevron}>&#9660;</span>
             </Link>
             <div className={styles.dropdownContent}>
             <Link href="/Loanpage">1</Link>
@@ -24,7 +24,7 @@ const Nav: React.FC = () => {
             </div>  
           </div>
           <Link className={styles.nav3} href="/Cards">
-            Card
+            CARD
           </Link>
           <button className={styles.box1}>Connect Wallet</button>
         </div>

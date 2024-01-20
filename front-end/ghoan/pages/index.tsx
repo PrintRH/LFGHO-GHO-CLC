@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <div className={styles.container}>
         <Card></Card>
         <Image src="/images/gho1.png" width={467} height={467} className={styles.gho1}></Image>
-        <Image src="/images/gho2.png" width={467} height={467} className={styles.gho2}></Image>
+        <Image src="/images/gho2.png" width={475} height={468} className={styles.gho2}></Image>
       </div>
     </main>
   );

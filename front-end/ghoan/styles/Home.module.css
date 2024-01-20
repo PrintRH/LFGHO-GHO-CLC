@@ -230,7 +230,7 @@
   letter-spacing: 1px;
   height: 31px;
   color: white;
-  font-family: 'Bebas';
+  font-family: 'BlackHanSans';
   margin-left: 45px;
   width: 215px;
 }
@@ -243,8 +243,8 @@
   height: 31px;
   position: absolute;
   width: 260px;
-  font-family: 'Bebas';
-  font-size: 15px;
+  font-family: 'BlackHanSans';
+  font-size: 10px;
   border-radius: 10px;
   border: 0.2px solid #FFF;
   background: linear-gradient(271deg, #2A2A2A 0.19%, #1E1E1E 100.37%); 
@@ -255,7 +255,7 @@
   height: 31px;
   position: relative;
   width: 170px;
-  font-family: 'Bebas';
+  font-family: 'BlackHanSans';
   font-size: 15px;
   border-radius: 10px;
   border: 0.2px solid #FFF;
@@ -299,24 +299,24 @@
 .nav1 {
   position: absolute;
   top: 35%;
-  font-family: 'Bebas';
-  font-size: 25px;
+  font-family: 'BlackHanSans';
+  font-size: 20px;
   left: 35%;
   color: white;
 }
 .nav2 {
   position: absolute;
   top: 35%;
-  font-family: 'Bebas';
-  font-size: 25px;
+  font-family: 'BlackHanSans';
+  font-size: 20px;
   left: 47%;
   color: white;
 }
 .nav3 {
   position: absolute;
   top: 35%;
-  font-family: 'Bebas';
-  font-size: 25px;
+  font-family: 'BlackHanSans';
+  font-size: 20px;
   color: white;
   left: 61%;
 }
@@ -376,7 +376,7 @@ transform: scale(1.15);
   height: 35px;
   position: absolute;
   width: 170px;
-  font-family: 'Bebas';
+  font-family: 'BlackHanSans';
   font-size: 15px;
   border-radius: 10px;
   border: 0.2px solid #FFF;
@@ -388,7 +388,7 @@ transform: scale(1.15);
 .dropdownContainer {
   position: absolute;
   top: 35%;
-  font-family: 'Bebas';
+  font-family: 'BlackHanSans';
   font-size: 25px;
   left: 48%;
   color: white;
