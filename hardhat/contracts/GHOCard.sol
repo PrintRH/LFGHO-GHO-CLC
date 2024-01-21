@@ -7,7 +7,8 @@ contract GHOCard is ERC721 {
 	uint256 private _tokenId;
 	string private constant _approvedCardURI =
 		"ipfs://QmNRBSn8HG8Q6p2P1Xz3H7vPM51Pc7DN54xX8yUjpoggKp/";
-	string private constant _expiredCardURI = "";
+	string private constant _expiredCardURI =
+		"ipfs://QmWmXi2YJVx5mBq2RzD8igYd1zvTXPfoBbvujDGy1b9Lxb/";
 
 	// Map tokenId to mint time
 	mapping(uint256 => uint256) private _nftMintingTimestamp;
