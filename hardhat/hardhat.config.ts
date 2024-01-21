@@ -7,11 +7,13 @@ import "hardhat-deploy";
 const providerApiKey = process.env.ALCHEMY_API_KEY || "oKxs-03sij-U_N0iOlrSsZFr29-IqbuF";
 // If not set, it uses the hardhat account 0 private key.
 const deployerPrivateKey =
-  process.env.DEPLOYER_PRIVATE_KEY ?? "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
+  process.env.DEPLOYER_PRIVATE_KEY!;
+const mainnetFork = process.env.MAINNET_RPC_URL!;
+const sepoliaUrl = process.env.SEPOLIA_RPC_URL!;
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.20",
+    compilers: [{version: "0.8.20",}, {version: "0.6.6"}, {version: "0.4.19"}],
     settings: {
       optimizer: {
         enabled: true,
@@ -28,13 +30,15 @@ const config: HardhatUserConfig = {
   },
   networks: {
     hardhat: {
+      chainId: 31337,
       forking: {
-        url: "https://eth-sepolia.g.alchemy.com/v2/-3S76GQaLX6fY58KuZIDlbvUHTGdEO8a",
+        url: mainnetFork,
       }
     },
     sepolia: {
-      url: "https://eth-sepolia.g.alchemy.com/v2/-3S76GQaLX6fY58KuZIDlbvUHTGdEO8a",
+      url: sepoliaUrl,
       accounts: [deployerPrivateKey],
+      chainId: 11155111,
     }
   }
 };
